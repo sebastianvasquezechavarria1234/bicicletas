@@ -1,0 +1,62 @@
+---
+const { bicicleta, video, particula1, particula2, description } = Astro.props
+---
+
+<article class="relative">
+  <div class="relative max-w-[930px] px-[20px] mx-auto">
+    <img 
+        class="bicicleta relative max-w-[90%] mx-auto z-20" 
+        src={bicicleta} 
+        alt="bicicleta" />
+    <video 
+        class="w-full translate-y-[-60px] max-sm:translate-y-[-7%]"
+        muted 
+        loop 
+        autoplay 
+        src={video}></video>
+    <div class="absolute top-[35%] left-[55%] bg-[#333] text-white font-bold py-[10px] px-[25px] rounded-full block rotate-[-10deg] z-30 max-sm:py-[2px] max-sm:px-[10px]">
+        <p>
+            {description}
+        </p>
+    </div>
+    <img
+        class="particula-1 absolute top-[35%] left-[-10%] w-[90px] max-sm:left-[4%] max-sm:w-[60px] z-30" 
+        src={particula1}
+        alt="particula">    
+    <img
+        class="particula-2 absolute top-[-5%] right-[-10%] w-[110px] max-sm:right-[4%] max-sm:w-[60px]" 
+        src={particula2} 
+        alt="particula">    
+  </div>
+</article>
+
+<style>
+    .bicicleta{
+        animation: bicicleta 10s infinite;
+    }
+    @keyframes bicicleta {
+        0%,
+        100%{
+            transform: translateY(-10px) rotate(-3deg);
+        }
+        50%{
+            transform: translateY(20px);
+        }   
+    }
+    .particula-1{
+        animation: particula-1 15s infinite alternate-reverse;
+    }
+    .particula-2{
+        animation: particula-1 15s infinite reverse;
+    }
+    @keyframes particula-1  {
+        0%,
+        100%{
+            transform: translateY(-12px) rotate(30deg);
+        }
+        50%{
+            transform: translateY(22px) rotate(-10deg);
+        }
+        
+    }
+</style>

@@ -1,0 +1,81 @@
+---
+import SliderCard from "./SliderCard.astro"
+---
+
+<section class="w-full pt-[0px] overflow-hidden">
+    <div class="max-w-[1000px] px-[20px] mx-auto">
+        <h1 class="text-center translate-y-[150px] max-sm:translate-y-[30px] max-sm:mt-[50px]">
+            Pedalea por tu pasión
+        </h1>
+    </div>
+    <ul class="slider w-[400%] flex">
+        <li class="w-[25%]">
+            <SliderCard
+                bicicleta="bicicleta-electrica.avif"
+                video="/slider-video-4.webm"
+                particula1="slider-particula-electrica-1.avif"
+                particula2="slider-particula-electrica-2.avif"
+                description="Bicicleta eléctrica"
+             />
+        </li>
+        <li class="w-[25%]">
+            <SliderCard
+                bicicleta="bicicleta-de-carretera.avif"
+                video="/slider-video-2.webm"
+                particula1="slider-particula-carretera-1.avif"
+                particula2="slider-particula-carretera-2.avif"
+                description="Bicicleta de carretera"
+             />
+        </li>
+        <li class="w-[25%]">
+            <SliderCard
+                bicicleta="bicicleta-de-grava.avif"
+                video="/slider-video-3.webm"
+                particula1="slider-particula-grava-1.avif"
+                particula2="slider-particula-grava-2.avif"
+                description="Bicicleta de grava"
+             />
+        </li>
+        <li class="w-[25%]">
+            <SliderCard
+                bicicleta="bicicleta-de-montaña.avif"
+                video="/slider-video-1.webm"
+                particula1="slider-paraticula-montaña-1.avif"
+                particula2="slider-paraticula-montaña-2.avif"
+                description="Bicicleta de montaña"
+             />
+        </li>
+    </ul>
+</section>
+
+<style>
+    .slider{
+        animation: slider 20s infinite alternate;
+    }
+    @keyframes slider {
+    0%{
+        margin-left: 0%;
+    }
+    20%{
+        margin-left: 0%;
+    }
+    25%{
+        margin-left: -100%;
+    }
+    45%{
+        margin-left: -100%;
+    }
+    50%{
+        margin-left: -200%;
+    }
+    70%{
+        margin-left: -200%;
+    }
+    75%{
+        margin-left: -300%;
+    }
+    100%{
+        margin-left: -300%;
+    }   
+}
+</style>

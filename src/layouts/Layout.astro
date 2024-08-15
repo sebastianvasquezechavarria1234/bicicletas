@@ -18,33 +18,38 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
+		<div class="puntero absolute w-[100px] h-[100px] bg-red-600"></div>
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+	@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Quicksand:wght@403&display=swap');
+	*{
+		font-family: "Bricolage Grotesque", sans-serif;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+	h1{
+		font-size: 10rem;
+		line-height: 145px;
+		font-weight: bold;
+		background-image: linear-gradient(180deg, #c2c2c2, #f5dfcd);
+		-webkit-background-clip: text;
+		color: transparent;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	body{
+		background-color: #f4f2f0;
+		color: #333;
+	}
+	a,p{
+		font-size: 18px;
+	}
+	@media screen and (max-width: 800px){
+		h1{
+			font-size: 3rem;
+			line-height: 40px;
+		}
+	}
+	@media screen and (max-width: 600px){
+		a,p{
+			font-size: 12px;
+		}
 	}
 </style>
