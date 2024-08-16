@@ -1,0 +1,63 @@
+---
+import Btn from "../Btn/Btn.astro"
+---
+
+<section class="max-w-[930px] px-[20px] mx-auto text-center">
+    <p>Descubra todas las piezas y repuestos de las diferentes bicicletas.</p>
+    <h1 class="text-[5rem] leading-[75px] mb-[30px] max-sm:text-[2rem] max-sm:leading-[30px]">Estamos pensando en ti</h1>
+  <article
+    class="description__card relative max-w-[400px] mx-auto px-[24px] py-[40px] rounded-[24px] text-white flex flex-col items-center z-20 max-sm:max-w-[300px] max-sm:py-[30px] max-sm:px-[20px] max-sm:rounded-[15px]"
+  >
+    <h5 class="text-[21px] max-sm:text-[15px]">
+      El mantenimiento frecuente le brinda un placer de ciclismo sin
+      preocupaciones
+    </h5>
+    <div class="description__card--img w-[300px] h-[300px] block max-sm:w-[200px] max-sm:h-[200px] "></div>
+    <Btn />
+  </article>
+</section>
+
+<style>
+  .description__card {
+    background-image: linear-gradient(to bottom, #f95b17, #e40767);
+  }
+  .description__card--img{
+    background-image: url("/repuestos1.webp");
+    background-position: center;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    animation: description__card--img 8s infinite alternate;
+  }
+  @keyframes description__card--img {
+    0%{
+        background-image: url("/repuestos1.webp");
+    }
+    20%{
+        background-image: url("/repuestos1.webp");
+    }
+    25%{
+        
+        background-image: url("/repuestos2.webp");
+    }
+    45%{
+        
+        background-image: url("/repuestos2.webp");
+    }
+    50%{
+        
+        background-image: url("/repuestos3.webp");
+    }
+    70%{
+        
+        background-image: url("/repuestos3.webp");
+    }
+    75%{
+        
+        background-image: url("/repuestos4.webp");
+    }
+    100%{
+        
+        background-image: url("/repuestos4.webp");
+    }   
+}
+</style>

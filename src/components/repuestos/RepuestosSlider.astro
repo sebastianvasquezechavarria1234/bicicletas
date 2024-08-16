@@ -1,0 +1,22 @@
+---
+import RepuestosSliderCard from "./RepuestosSliderCard.astro"
+---
+
+<section class="w-full translate-y-[-30%] overflow-hidden">
+    <ul class="RepuestosSlider flex items-center gap-[20px] w-[350%] max-sm:gap-[10px] max-sm:w-[450%]">
+        <RepuestosSliderCard />
+        <RepuestosSliderCard />
+    </ul>
+</section>
+
+<style>
+    .RepuestosSlider{
+        animation: RepuestosSlider 25s infinite linear alternate;
+    }
+    @keyframes RepuestosSlider {
+        100%{
+            transform: translateX(-70%);
+        }
+    }
+
+</style>

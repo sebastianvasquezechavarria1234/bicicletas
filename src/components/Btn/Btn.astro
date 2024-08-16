@@ -1,0 +1,47 @@
+---
+const { style } = Astro.props;
+---
+
+<a
+  class=`
+        ${style} border-[1px] border-white/80 rounded-[30px] py-[14px] px-[25px] flex items-center gap-[5px] max-sm:py-[7px] max-sm:px-[15px]
+    `
+  href=""
+>
+  <div class="h-[27px] overflow-hidden max-sm:h-[17px]">
+    <ul class="flex flex-col duration-200 transition-all">
+      <span>Componentes</span>
+      <span>Componentes</span>
+    </ul>
+  </div>
+  <svg
+    class="duration-300 transition-all"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+      d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"
+    ></path></svg
+  >
+</a>
+
+<style>
+  a:hover div ul {
+    transform: translateY(-27px);
+  }
+  a:hover svg{
+    transform: translateX(5px)
+  }
+  @media screen and (max-width: 700px){
+    a:hover div ul{
+      transform: translateY(-19px)
+    }
+  }
+</style>
