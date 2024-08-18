@@ -1,0 +1,90 @@
+---
+---
+
+<a 
+    class="relative w-full bg-white py-[40px] rounded-[20px]"
+    href="">
+    <!-- PARTICLE -->
+     <div class="particle absolute top-[-5%] left-[60%] w-[130px] z-30 opacity-0 duration-200 transition-all">
+        <img class="w-full" src="/slider-paraticula-montaña-1.avif" alt="particula">
+     </div>
+    <!-- PICTURE CICLA -->
+    <picture class="w-full overflow-hidden block mt-[40px]">
+        <img
+            class="bicicleta w-full translate-x-[-60px] duration-200 transition-all" 
+            src="/grid1.jpg" 
+            alt="bicicletas">
+    </picture>
+    <div class="flex items-center justify-between mt-[50px] px-[24px]">
+        <div class="">
+            <p class="uppercase">bmc</p>
+            <p>Cuatro tiempos TRES</p>
+        </div>
+        <span class="relative w-[60px] h-[60px] rounded-full border-[1px] border-gray-500 flex justify-center items-center overflow-hidden duartion-300">
+            <div class="card__span--hover absolute w-full h-full bg-red-500 -z-10 left-[-100%] duration-200 transition-all rounded-full"></div>
+            <svg  
+                xmlns="http://www.w3.org/2000/svg"  width="24"  
+                height="24"  
+                viewBox="0 0 24 24"  
+                fill="none"  
+                stroke="currentColor"  
+                stroke-width="2"  
+                stroke-linecap="round"  stroke-linejoin="round"  
+                class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" 
+                d="M0 0h24v24H0z" 
+                fill="none"/>
+                    <path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>
+
+        </span>
+    </div>
+    <!-- TIPO DE BICICLETA -->
+    <div class="description__card absolute bottom-[-5%] left-[5%] bg-[#333] text-white font-bold py-[10px] px-[25px] rounded-full block rotate-[-10deg] z-30 max-sm:py-[2px] max-sm:px-[10px] opacity-0 duration-200 transition-all">
+        <p>
+            Bicicleta de montaña
+        </p>
+    </div>
+</a>
+
+<style>
+    /* DESCRIPTION CARD */
+    a:hover .description__card{
+        opacity: 1;
+        bottom: -2%;
+    }
+    /* HOVER CICLA */
+    a:hover .bicicleta{
+        transform: translateX(-40px)
+    }
+    /* SPAN */
+    .card__span--hover{
+        transform: scale(0);
+    }
+    a:hover .card__span--hover{
+        transform: scale(1);
+        left: 0;
+    }
+    a:hover span svg{
+        stroke: white;
+    }
+    a:hover span{
+        border: 1px solid white;
+    }
+    /* PARTICLE */
+    a:hover .particle{
+        opacity: 1;
+        top: -10%;
+    }
+    .particle img{
+        animation: particula-1 10s infinite alternate-reverse;
+    }
+    @keyframes particula-1  {
+        0%,
+        100%{
+            transform: translateY(-12px);
+        }
+        50%{
+            transform: translateY(22px) rotate(-10deg);
+        }
+        
+    }
+</style>
