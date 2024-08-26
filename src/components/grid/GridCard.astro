@@ -1,4 +1,5 @@
 ---
+const { img, title, subTitle, particle, titleOpacity } = Astro.props
 ---
 
 <a 
@@ -6,19 +7,22 @@
     href="">
     <!-- PARTICLE -->
      <div class="particle absolute top-[-5%] left-[60%] w-[130px] z-30 opacity-0 duration-200 transition-all">
-        <img class="w-full" src="/slider-paraticula-montaña-1.avif" alt="particula">
+        <img 
+            class="w-full" 
+            src={particle} 
+            alt="particula">
      </div>
     <!-- PICTURE CICLA -->
-    <picture class="w-full overflow-hidden block mt-[40px] max-sm:mt-[0px] max-sm:p-[20px]">
+    <picture class="w-full overflow-hidden block mt-[40px] max-sm:mt-[20px]">
         <img
-            class="bicicleta w-full translate-x-[-60px] duration-200 transition-all max-sm:translate-x-0" 
-            src="/grid1.jpg" 
+            class="bicicleta w-full translate-x-[-60px] duration-200 transition-all" 
+            src={img} 
             alt="bicicletas">
     </picture>
     <div class="flex items-center justify-between mt-[50px] px-[24px]">
         <div class="">
-            <p class="uppercase">bmc</p>
-            <p>Cuatro tiempos TRES</p>
+            <p class="uppercase">{title}</p>
+            <p>{subTitle}</p>
         </div>
         <span class="relative w-[60px] h-[60px] rounded-full border-[1px] border-gray-500 flex justify-center items-center overflow-hidden duartion-300 max-sm:w-[40px] max-sm:h-[40px]">
             <div class="card__span--hover absolute w-full h-full bg-red-500 z-10 left-[-100%] duration-200 transition-all rounded-full"></div>
@@ -41,7 +45,7 @@
     <!-- TIPO DE BICICLETA -->
     <div class="description__card absolute bottom-[-5%] left-[5%] bg-[#333] text-white font-bold py-[10px] px-[25px] rounded-full block rotate-[-10deg] z-30 max-sm:py-[2px] max-sm:px-[10px] opacity-0 duration-200 transition-all max-sm:opacity-100">
         <p>
-            Bicicleta de montaña
+            {titleOpacity}
         </p>
     </div>
 </a>
@@ -85,6 +89,15 @@
         }
         50%{
             transform: translateY(22px) rotate(-10deg);
+        }
+        
+    }
+    /* RESPONSIVE */
+    @media screen and (max-width: 700px){
+        .particle{
+            opacity: 1;
+            width: 85px;
+            left: 75%;
         }
         
     }
