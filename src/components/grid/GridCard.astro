@@ -9,9 +9,9 @@
         <img class="w-full" src="/slider-paraticula-montaña-1.avif" alt="particula">
      </div>
     <!-- PICTURE CICLA -->
-    <picture class="w-full overflow-hidden block mt-[40px]">
+    <picture class="w-full overflow-hidden block mt-[40px] max-sm:mt-[0px] max-sm:p-[20px]">
         <img
-            class="bicicleta w-full translate-x-[-60px] duration-200 transition-all" 
+            class="bicicleta w-full translate-x-[-60px] duration-200 transition-all max-sm:translate-x-0" 
             src="/grid1.jpg" 
             alt="bicicletas">
     </picture>
@@ -20,9 +20,10 @@
             <p class="uppercase">bmc</p>
             <p>Cuatro tiempos TRES</p>
         </div>
-        <span class="relative w-[60px] h-[60px] rounded-full border-[1px] border-gray-500 flex justify-center items-center overflow-hidden duartion-300">
-            <div class="card__span--hover absolute w-full h-full bg-red-500 -z-10 left-[-100%] duration-200 transition-all rounded-full"></div>
+        <span class="relative w-[60px] h-[60px] rounded-full border-[1px] border-gray-500 flex justify-center items-center overflow-hidden duartion-300 max-sm:w-[40px] max-sm:h-[40px]">
+            <div class="card__span--hover absolute w-full h-full bg-red-500 z-10 left-[-100%] duration-200 transition-all rounded-full"></div>
             <svg  
+                class="relative z-20"
                 xmlns="http://www.w3.org/2000/svg"  width="24"  
                 height="24"  
                 viewBox="0 0 24 24"  
@@ -38,7 +39,7 @@
         </span>
     </div>
     <!-- TIPO DE BICICLETA -->
-    <div class="description__card absolute bottom-[-5%] left-[5%] bg-[#333] text-white font-bold py-[10px] px-[25px] rounded-full block rotate-[-10deg] z-30 max-sm:py-[2px] max-sm:px-[10px] opacity-0 duration-200 transition-all">
+    <div class="description__card absolute bottom-[-5%] left-[5%] bg-[#333] text-white font-bold py-[10px] px-[25px] rounded-full block rotate-[-10deg] z-30 max-sm:py-[2px] max-sm:px-[10px] opacity-0 duration-200 transition-all max-sm:opacity-100">
         <p>
             Bicicleta de montaña
         </p>
@@ -67,7 +68,7 @@
         stroke: white;
     }
     a:hover span{
-        border: 1px solid white;
+        border: 1px solid rgb(96, 96, 96);
     }
     /* PARTICLE */
     a:hover .particle{
